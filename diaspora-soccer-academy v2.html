@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diaspora Soccer Academy — The Paws 🐾 | Partner With Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1b5e30;--dkgreen:#0d2e18;--gold:#d4a843;--ltgold:#f0c96e;--cream:#f4ede0;--dark:#090f0b;--mid:#152a1c;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--cream);font-family:"Jost",sans-serif;overflow-x:hidden;}
+.btn{padding:14px 30px;border-radius:3px;font-size:0.88rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:all 0.25s;display:inline-block;}
+.btn-gold{background:var(--gold);color:var(--dark);}.btn-gold:hover{background:var(--ltgold);transform:translateY(-2px);}
+.btn-ghost{border:1.5px solid rgba(244,237,224,0.3);color:var(--cream);}.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:70px 24px 50px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.18);z-index:0;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 100% 55% at 50% 0%,rgba(27,94,48,0.75) 0%,transparent 70%);z-index:1;}
+.paw{position:absolute;font-size:1.4rem;opacity:0;animation:floatPaw 9s ease-in-out infinite;z-index:2;}
+.paw:nth-child(1){left:6%;top:18%;animation-delay:0s;}.paw:nth-child(2){left:90%;top:14%;animation-delay:1.8s;}.paw:nth-child(3){left:18%;top:72%;animation-delay:3.2s;}.paw:nth-child(4){left:82%;top:68%;animation-delay:4.7s;}.paw:nth-child(5){left:50%;top:8%;animation-delay:2.1s;}.paw:nth-child(6){left:38%;top:82%;animation-delay:6s;}
+@keyframes floatPaw{0%{opacity:0;transform:translateY(16px) rotate(-8deg);}35%{opacity:0.35;}70%{opacity:0.2;}100%{opacity:0;transform:translateY(-36px) rotate(8deg);}}
+.hero-content{position:relative;z-index:3;max-width:860px;}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(212,168,67,0.13);border:1px solid rgba(212,168,67,0.38);border-radius:100px;padding:6px 20px;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;animation:rise 0.8s ease both;}
+.hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.8rem,13vw,9rem);line-height:0.88;letter-spacing:0.025em;color:#fff;animation:rise 0.9s 0.12s ease both;}
+.hero h1 em{display:block;color:var(--gold);font-style:normal;text-shadow:0 0 60px rgba(212,168,67,0.4);}
+.hero-tagline{margin-top:22px;font-size:clamp(0.95rem,2.4vw,1.15rem);color:rgba(244,237,224,0.78);font-weight:300;line-height:1.65;max-width:580px;margin-left:auto;margin-right:auto;animation:rise 1s 0.28s ease both;}
+.hero-btns{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:rise 1s 0.42s ease both;}
+@keyframes rise{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;text-align:center;opacity:0.4;animation:bob 2.2s ease-in-out infinite;}
+.scroll-cue span{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;display:block;margin-bottom:6px;}
+.scroll-cue .bar{width:1px;height:30px;background:var(--cream);margin:0 auto;}
+@keyframes bob{0%,100%{opacity:0.35;transform:translateX(-50%) translateY(0);}50%{opacity:0.65;transform:translateX(-50%) translateY(5px);}}
+
+/* GOLD BAND */
+.gold-band{background:var(--gold);padding:18px 24px;}
+.band-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px;}
+.stat{text-align:center;color:var(--dark);}
+.stat-n{font-family:"Bebas Neue",sans-serif;font-size:2.1rem;line-height:1;}
+.stat-l{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;opacity:0.65;margin-top:2px;}
+
+/* SECTIONS */
+section{padding:80px 24px;}
+.container{max-width:1060px;margin:0 auto;}
+.label{font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+.label::after{content:"";flex:0 0 48px;height:1px;background:var(--gold);opacity:0.35;}
+.sec-title{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.6rem,6vw,4.2rem);letter-spacing:0.03em;line-height:0.96;color:#fff;margin-bottom:22px;}
+.div{height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.3;}
+
+/* STORY */
+.story{background:var(--dark);}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+@media(max-width:700px){.story-grid{grid-template-columns:1fr;gap:36px;}}
+.story-text p{color:rgba(244,237,224,0.68);line-height:1.78;font-size:0.98rem;font-weight:300;margin-bottom:16px;}
+.story-text p strong{color:var(--cream);font-weight:500;}
+.founder-box{background:var(--mid);border:1px solid rgba(212,168,67,0.3);border-radius:10px;overflow:hidden;}
+.founder-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;}
+.founder-info{padding:22px 24px;}
+.f-name{font-family:"Bebas Neue",sans-serif;font-size:2rem;letter-spacing:0.06em;color:var(--gold);}
+.f-title{font-size:0.73rem;text-transform:uppercase;letter-spacing:0.14em;color:rgba(244,237,224,0.45);margin-bottom:10px;}
+.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;}
+.badge{font-size:0.66rem;padding:4px 11px;border-radius:100px;letter-spacing:0.07em;}
+.badge-gold{background:rgba(212,168,67,0.14);border:1px solid rgba(212,168,67,0.35);color:var(--gold);}
+.badge-green{background:rgba(27,94,48,0.3);border:1px solid rgba(27,94,48,0.6);color:#7ecf90;}
+.loc-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(212,168,67,0.08);border:1px solid rgba(212,168,67,0.22);border-radius:6px;padding:10px 16px;font-size:0.83rem;color:rgba(244,237,224,0.7);margin-top:22px;}
+
+/* MVS */
+.mvs{background:var(--green);position:relative;overflow:hidden;}
+.mvs::before{content:"🐾";position:absolute;right:4%;top:50%;transform:translateY(-50%);font-size:14rem;opacity:0.05;pointer-events:none;}
+.mvs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:680px){.mvs-grid{grid-template-columns:1fr;}}
+.mvs-card{background:rgba(0,0,0,0.28);border-radius:8px;padding:26px 22px;border-left:3px solid var(--gold);}
+.mvs-lbl{font-size:0.66rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;}
+.mvs-txt{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.3rem;color:#fff;line-height:1.5;}
+
+/* GALLERY - masonry-style themed sections */
+.gallery-sec{background:#0a1510;padding:60px 24px;}
+.gallery-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.tab-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(244,237,224,0.6);padding:8px 18px;border-radius:100px;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;font-family:"Jost",sans-serif;}
+.tab-btn.active,.tab-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--dark);}
+.gallery-panel{display:none;}
+.gallery-panel.active{display:grid;}
+.gallery-grid-3{grid-template-columns:repeat(3,1fr);gap:10px;}
+.gallery-grid-2{grid-template-columns:repeat(2,1fr);gap:10px;}
+@media(max-width:680px){.gallery-grid-3,.gallery-grid-2{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:420px){.gallery-grid-3,.gallery-grid-2{grid-template-columns:1fr;}}
+.g-item{border-radius:6px;overflow:hidden;position:relative;cursor:pointer;}
+.g-item.tall{aspect-ratio:3/4;}.g-item.sq{aspect-ratio:1;}.g-item.wide{aspect-ratio:16/9;}.g-item.nat{aspect-ratio:4/3;}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.g-item:hover img{transform:scale(1.07);}
+.g-cap{position:absolute;bottom:0;left:0;right:0;padding:10px 12px;background:linear-gradient(transparent,rgba(0,0,0,0.8));font-size:0.7rem;color:rgba(244,237,224,0.85);letter-spacing:0.07em;text-transform:uppercase;opacity:0;transition:opacity 0.3s;}
+.g-item:hover .g-cap{opacity:1;}
+.g-item.span2{grid-column:span 2;}
+
+/* OBJECTIVES */
+.objectives{background:#0f1e13;}
+.obj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px;}
+@media(max-width:560px){.obj-grid{grid-template-columns:1fr;}}
+.obj-card{background:var(--mid);border-radius:8px;padding:26px;border-top:2px solid var(--green);transition:border-color 0.3s,transform 0.3s;}
+.obj-card:hover{border-color:var(--gold);transform:translateY(-4px);}
+.obj-icon{font-size:1.7rem;margin-bottom:12px;}
+.obj-title{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;letter-spacing:0.06em;color:var(--gold);margin-bottom:8px;}
+.obj-desc{color:rgba(244,237,224,0.62);font-size:0.88rem;line-height:1.65;font-weight:300;}
+
+/* DONATE */
+.donate{background:linear-gradient(135deg,#0a1510 0%,#1b5e30 100%);position:relative;}
+.donate::before{content:"💚";position:absolute;left:3%;top:50%;transform:translateY(-50%);font-size:12rem;opacity:0.04;pointer-events:none;}
+.donate-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px;}
+@media(max-width:720px){.donate-cards{grid-template-columns:1fr;}}
+.bank-card{background:rgba(0,0,0,0.35);border:1px solid rgba(212,168,67,0.3);border-radius:10px;padding:28px;position:relative;overflow:hidden;}
+.bank-card::before{content:"🏦";position:absolute;right:-10px;bottom:-20px;font-size:7rem;opacity:0.06;pointer-events:none;}
+.bank-lbl{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.18em;color:var(--gold);margin-bottom:18px;}
+.bank-name{font-family:"Bebas Neue",sans-serif;font-size:2rem;letter-spacing:0.06em;color:#fff;margin-bottom:18px;}
+.bank-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
+.br-lbl{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(244,237,224,0.45);}
+.br-val{font-size:0.92rem;color:var(--cream);font-weight:500;}
+.br-val.acct{font-family:"Courier New",monospace;color:var(--gold);font-size:1.08rem;font-weight:600;}
+.copy-btn{margin-top:20px;width:100%;padding:13px;background:var(--gold);color:var(--dark);border:none;border-radius:6px;font-family:"Jost",sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.25s;}
+.copy-btn:hover{background:var(--ltgold);transform:translateY(-2px);}
+.copy-btn.done{background:#4caf50;color:#fff;}
+.mpesa-card{background:rgba(0,0,0,0.35);border:1px solid rgba(212,168,67,0.3);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden;}
+.mpesa-card::before{content:"📱";position:absolute;right:-10px;bottom:-20px;font-size:7rem;opacity:0.06;pointer-events:none;}
+.mpesa-lbl{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.18em;color:var(--gold);margin-bottom:8px;}
+.mpesa-title{font-family:"Bebas Neue",sans-serif;font-size:2rem;letter-spacing:0.06em;color:#fff;margin-bottom:8px;}
+.mpesa-body{color:rgba(244,237,224,0.65);font-size:0.88rem;line-height:1.65;font-weight:300;}
+.mpesa-nums{display:flex;flex-direction:column;gap:12px;}
+.mpesa-num{display:flex;align-items:center;gap:12px;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;}
+.mpesa-num .ico{font-size:1.3rem;}
+.mpesa-num .num{font-family:"Courier New",monospace;font-size:1.05rem;font-weight:600;color:var(--gold);flex:1;}
+.mpesa-num .sub{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(244,237,224,0.4);}
+
+/* TIERS */
+.tiers{background:#0d1811;}
+.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px;}
+@media(max-width:820px){.tiers-grid{grid-template-columns:1fr;}}
+.tier{background:var(--mid);border:2px solid rgba(212,168,67,0.2);border-radius:12px;padding:32px 28px;transition:all 0.3s;position:relative;}
+.tier:hover{border-color:var(--gold);transform:translateY(-6px);}
+.tier.star{border-color:var(--gold);background:linear-gradient(135deg,var(--mid) 0%,rgba(27,94,48,0.3) 100%);}
+.star-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--dark);padding:4px 14px;border-radius:100px;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;}
+.tier-ico{font-size:2.8rem;margin-bottom:16px;}
+.tier-name{font-family:"Bebas Neue",sans-serif;font-size:1.8rem;letter-spacing:0.06em;color:var(--gold);margin-bottom:6px;}
+.tier-level{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(244,237,224,0.45);margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.tier ul{list-style:none;}
+.tier li{padding:8px 0 8px 22px;position:relative;color:rgba(244,237,224,0.7);font-size:0.88rem;line-height:1.5;font-weight:300;}
+.tier li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:600;}
+
+/* SOCIAL */
+.social-sec{background:var(--dark);padding:70px 24px;}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:860px;margin:0 auto;}
+.social-btn{display:flex;align-items:center;gap:14px;padding:16px 20px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:var(--cream);transition:all 0.3s;}
+.social-btn:hover{background:rgba(212,168,67,0.08);border-color:rgba(212,168,67,0.3);transform:translateY(-3px);}
+.social-btn span{font-size:1.8rem;}
+.social-btn div{flex:1;text-align:left;}
+
+/* CONTACT */
+.contact{background:linear-gradient(135deg,var(--green) 0%,var(--dkgreen) 100%);padding:80px 24px;position:relative;overflow:hidden;}
+.contact::before{content:"🤝";position:absolute;left:5%;bottom:10%;font-size:16rem;opacity:0.04;pointer-events:none;}
+.contact-inner{max-width:760px;margin:0 auto;text-align:center;}
+.po-box{display:inline-flex;align-items:center;background:rgba(0,0,0,0.3);border:1px solid rgba(212,168,67,0.3);border-radius:100px;padding:10px 24px;font-size:0.85rem;color:var(--cream);margin-bottom:18px;}
+.contact-sub{color:rgba(244,237,224,0.68);font-size:1rem;line-height:1.75;font-weight:300;margin-bottom:36px;max-width:620px;margin-left:auto;margin-right:auto;}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:38px;}
+@media(max-width:560px){.contact-grid{grid-template-columns:1fr;}}
+.c-card{background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:20px;text-align:left;}
+.c-lbl{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--gold);margin-bottom:10px;}
+.c-val{color:var(--cream);font-size:0.92rem;line-height:1.6;}
+.c-val a{color:var(--cream);text-decoration:none;transition:color 0.25s;}
+.c-val a:hover{color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--dark);padding:48px 24px;text-align:center;border-top:1px solid rgba(212,168,67,0.15);}
+footer p{color:rgba(244,237,224,0.5);font-size:0.82rem;line-height:1.85;font-weight:300;}
+footer strong{color:var(--gold);font-weight:600;}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1920');"></div>
+  <div class="paw">🐾</div>
+  <div class="paw">🐾</div>
+  <div class="paw">🐾</div>
+  <div class="paw">🐾</div>
+  <div class="paw">🐾</div>
+  <div class="paw">🐾</div>
+  <div class="hero-content">
+    <div class="pill">🇰🇪 &nbsp; Kajiado County, Kenya</div>
+    <h1>Diaspora Soccer<br><em>The Paws</em> 🐾</h1>
+    <p class="hero-tagline">Building Champions On & Off The Pitch — Where Talent Meets Opportunity Through Sport, Education & Community</p>
+    <div class="hero-btns">
+      <a href="#donate" class="btn btn-gold">Donate Now</a>
+      <a href="#partner" class="btn btn-ghost">Partner With Us</a>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="bar"></div>
+  </div>
+</section>
+
+<!-- GOLD BAND -->
+<div class="gold-band">
+  <div class="band-inner">
+    <div class="stat"><div class="stat-n">300+</div><div class="stat-l">Young Athletes</div></div>
+    <div class="stat"><div class="stat-n">15</div><div class="stat-l">Tournaments Won</div></div>
+    <div class="stat"><div class="stat-n">8</div><div class="stat-l">Community Events</div></div>
+    <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Heart & Passion</div></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story" id="about">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text">
+        <div class="label">Our Story</div>
+        <h2 class="sec-title">From Grassroots<br>To Greatness</h2>
+        <p>Founded in the heart of <strong>Ongata Rongai, Kajiado County</strong>, Diaspora Soccer Academy — affectionately known as <strong>The Paws 🐾</strong> — was born from a simple but powerful vision: to give every child, regardless of background, the chance to play, grow and dream big.</p>
+        <p>We believe that football is more than a game. It's a pathway to <strong>discipline, teamwork, resilience and opportunity</strong>. For many of our young athletes, it's the bridge between potential and possibility — a chance to represent their community, earn scholarships and even play professionally.</p>
+        <p>Our academy serves <strong>over 300 young people</strong> from low-income families in and around Kajiado. We provide free football training, life skills workshops, academic support and mentorship — all driven by volunteers who believe in the transformative power of sport.</p>
+      </div>
+      <div class="founder-box">
+        <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600" alt="Founder Ken Maritim" class="founder-photo">
+        <div class="founder-info">
+          <div class="f-title">Founder & Head Coach</div>
+          <div class="f-name">Ken Maritim</div>
+          <div class="badges">
+            <span class="badge badge-gold">CAF C Licensed</span>
+            <span class="badge badge-green">Community Leader</span>
+            <span class="badge badge-gold">Youth Mentor</span>
+          </div>
+          <div class="loc-chip">📍 &nbsp; Ongata Rongai, Kajiado County</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MVS -->
+<section class="mvs">
+  <div class="container">
+    <div class="label">Our Foundation</div>
+    <h2 class="sec-title">Mission · Vision · Strategy</h2>
+    <div class="mvs-grid">
+      <div class="mvs-card">
+        <div class="mvs-lbl">Mission</div>
+        <div class="mvs-txt">To nurture young talent through world-class football training, education & mentorship — creating pathways to success both on and off the pitch.</div>
+      </div>
+      <div class="mvs-card">
+        <div class="mvs-lbl">Vision</div>
+        <div class="mvs-txt">A future where every child in Kajiado has equal access to quality sports education, inspiring a generation of confident, disciplined leaders.</div>
+      </div>
+      <div class="mvs-card">
+        <div class="mvs-lbl">Strategy</div>
+        <div class="mvs-txt">Community partnerships, donor support & volunteerism — building sustainable programmes that grow with our athletes and amplify local impact.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="container">
+    <div class="label">Our Journey</div>
+    <h2 class="sec-title">Training · Tournaments · Community</h2>
+    <div class="gallery-tabs">
+      <button class="tab-btn active" onclick="showTab('training',this)">Training Sessions</button>
+      <button class="tab-btn" onclick="showTab('tournaments',this)">Tournaments</button>
+      <button class="tab-btn" onclick="showTab('community',this)">Community Events</button>
+    </div>
+    
+    <div id="tab-training" class="gallery-panel active gallery-grid-3">
+      <div class="g-item tall"><img src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=600" alt="Training"><div class="g-cap">Morning Drills</div></div>
+      <div class="g-item sq"><img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?w=600" alt="Skills"><div class="g-cap">Skills Training</div></div>
+      <div class="g-item sq"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600" alt="Teamwork"><div class="g-cap">Team Building</div></div>
+      <div class="g-item wide span2"><img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200" alt="Practice"><div class="g-cap">Weekly Practice Sessions</div></div>
+      <div class="g-item nat"><img src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=600" alt="Youth"><div class="g-cap">Youth Development</div></div>
+    </div>
+    
+    <div id="tab-tournaments" class="gallery-panel gallery-grid-2">
+      <div class="g-item nat"><img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=600" alt="Match"><div class="g-cap">Tournament Action</div></div>
+      <div class="g-item nat"><img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=600" alt="Victory"><div class="g-cap">Championship Win</div></div>
+      <div class="g-item wide span2"><img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?w=1200" alt="Team"><div class="g-cap">Regional Finals 2024</div></div>
+      <div class="g-item sq"><img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600" alt="Celebration"><div class="g-cap">Team Celebration</div></div>
+      <div class="g-item sq"><img src="https://images.unsplash.com/photo-1472696762479-eef657f76d3a?w=600" alt="Trophy"><div class="g-cap">Trophy Presentation</div></div>
+    </div>
+    
+    <div id="tab-community" class="gallery-panel gallery-grid-3">
+      <div class="g-item nat"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600" alt="Outreach"><div class="g-cap">Community Outreach</div></div>
+      <div class="g-item sq"><img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600" alt="Coaching"><div class="g-cap">Youth Coaching</div></div>
+      <div class="g-item sq"><img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600" alt="Workshop"><div class="g-cap">Skills Workshop</div></div>
+      <div class="g-item tall"><img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=600" alt="Mentorship"><div class="g-cap">Mentorship Sessions</div></div>
+      <div class="g-item nat span2"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1200" alt="Event"><div class="g-cap">Annual Community Day</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIVES -->
+<section class="objectives">
+  <div class="container">
+    <div class="label">What We Do</div>
+    <h2 class="sec-title">Our Key Objectives</h2>
+    <div class="obj-grid">
+      <div class="obj-card">
+        <div class="obj-icon">⚽</div>
+        <div class="obj-title">Elite Training</div>
+        <div class="obj-desc">Provide world-class football coaching and development programmes for youth aged 6-18, led by CAF-licensed coaches and international volunteers.</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-icon">🎓</div>
+        <div class="obj-title">Education First</div>
+        <div class="obj-desc">Integrate academic support, life skills workshops and mentorship to ensure our athletes excel both on the pitch and in the classroom.</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-icon">🏆</div>
+        <div class="obj-title">Competitive Excellence</div>
+        <div class="obj-desc">Participate in regional and national tournaments, giving players exposure to scouts, clubs and scholarship opportunities.</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-icon">🤝</div>
+        <div class="obj-title">Community Impact</div>
+        <div class="obj-desc">Host community events, health camps and youth empowerment initiatives that extend far beyond the football field.</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-icon">🌍</div>
+        <div class="obj-title">Global Partnerships</div>
+        <div class="obj-desc">Build strategic alliances with international academies, NGOs and sponsors to create pathways for our athletes to play abroad.</div>
+      </div>
+      <div class="obj-card">
+        <div class="obj-icon">💪</div>
+        <div class="obj-title">Holistic Development</div>
+        <div class="obj-desc">Develop well-rounded individuals with strong character, discipline, leadership and the resilience to overcome any challenge.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section class="donate" id="donate">
+  <div class="container">
+    <div class="label">Support Us</div>
+    <h2 class="sec-title">Make A Difference<br>Today</h2>
+    <p style="color:rgba(244,237,224,0.68);font-size:0.98rem;line-height:1.75;font-weight:300;max-width:680px;margin-bottom:28px;">Your donation — whether large or small — provides kits, transport, meals, coaching fees and tournament entry for young athletes who would otherwise have no access to quality football training.</p>
+    <div class="donate-cards">
+      <div class="bank-card">
+        <div class="bank-lbl">🏦 Bank Transfer — Kenya</div>
+        <div class="bank-name">Cooperative Bank</div>
+        <div class="bank-row"><span class="br-lbl">Account Name</span><span class="br-val">Diaspora Sports CBO</span></div>
+        <div class="bank-row"><span class="br-lbl">Account Number</span><span class="br-val acct">01136190856100</span></div>
+        <div class="bank-row"><span class="br-lbl">Bank</span><span class="br-val">Cooperative Bank of Kenya</span></div>
+        <button class="copy-btn" id="copyBtn" onclick="navigator.clipboard.writeText('01136190856100').then(()=>{const b=document.getElementById('copyBtn');b.textContent='✓ Copied!';b.classList.add('done');setTimeout(()=>{b.textContent='📋 Copy Account Number';b.classList.remove('done');},2500);});">📋 Copy Account Number</button>
+      </div>
+      <div class="mpesa-card">
+        <div>
+          <div class="mpesa-lbl">📱 M-Pesa / Mobile Money</div>
+          <div class="mpesa-title">Send Via M-Pesa</div>
+          <p class="mpesa-body">Send your contribution directly via M-Pesa or reach us on WhatsApp. Every shilling goes directly to the players and programmes.</p>
+        </div>
+        <div class="mpesa-nums">
+          <div class="mpesa-num"><span class="ico">📞</span><span class="num">0746 517 518</span><span class="sub">Ken Maritim</span></div>
+          <div class="mpesa-num"><span class="ico">📞</span><span class="num">0739 311 329</span><span class="sub">Academy Line</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIERS -->
+<section class="tiers" id="partner">
+  <div class="container">
+    <div class="label">Partnership</div>
+    <h2 class="sec-title">Join<br>The Paws Family</h2>
+    <div class="tiers-grid">
+      <div class="tier">
+        <div class="tier-ico">🌱</div><div class="tier-name">Community Friend</div>
+        <div class="tier-level">Individual / In-Kind Support</div>
+        <ul><li>Donate equipment or kit</li><li>Sponsor a player's meals</li><li>Sponsor transport to a tournament</li><li>Certificate of appreciation</li><li>Social media recognition</li></ul>
+      </div>
+      <div class="tier star">
+        <div class="star-badge">⭐ Most Impactful</div>
+        <div class="tier-ico">🦁</div><div class="tier-name">Pride Partner</div>
+        <div class="tier-level">Corporate / NGO / Foundation</div>
+        <ul><li>Logo on academy kits & banners</li><li>Named tournament or training event</li><li>CSR reporting & impact data</li><li>Media coverage opportunities</li><li>Scholarship fund co-creation</li><li>Annual impact report</li></ul>
+      </div>
+      <div class="tier">
+        <div class="tier-ico">🌍</div><div class="tier-name">Global Ambassador</div>
+        <div class="tier-level">International Partnership</div>
+        <ul><li>Player exchange programmes</li><li>International tournament access</li><li>Joint scholarship programmes</li><li>Co-branding opportunities</li><li>Scout network collaboration</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social-sec">
+  <div class="container" style="text-align:center;">
+    <div class="label" style="justify-content:center;">Follow Us</div>
+    <h2 class="sec-title" style="margin-bottom:8px;">Find Us Online</h2>
+    <p style="color:rgba(244,237,224,0.5);font-size:0.92rem;margin-bottom:28px;font-weight:300;">Follow our journey and help us reach more donors worldwide.</p>
+    <div class="social-grid">
+      <a href="#" class="social-btn"><span>👥</span><div><div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(244,237,224,0.4);margin-bottom:2px;">Facebook</div>Diaspora Soccer Academy, Kajiado Kenya</div></a>
+      <a href="#" class="social-btn"><span>📸</span><div><div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(244,237,224,0.4);margin-bottom:2px;">Instagram</div>Diaspora Soccer Academy, Kenya</div></a>
+      <a href="#" class="social-btn"><span>🐦</span><div><div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(244,237,224,0.4);margin-bottom:2px;">Twitter / X</div>Diaspora Soccer</div></a>
+      <a href="#" class="social-btn"><span>🎵</span><div><div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(244,237,224,0.4);margin-bottom:2px;">TikTok</div>Diaspora Soccer Academy, Kenya</div></a>
+      <a href="#" class="social-btn"><span>▶️</span><div><div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(244,237,224,0.4);margin-bottom:2px;">YouTube</div>Diaspora Soccer Academy TV</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="label" style="justify-content:center;">Reach Out</div>
+    <h2 class="sec-title" style="margin-bottom:14px;">Let's Build<br>This Together</h2>
+    <div class="po-box">📬 &nbsp; P.O. Box 38910–00100, Nairobi, Kenya</div>
+    <p class="contact-sub">Whether you're a local business, an international organisation, an individual donor or simply someone who believes in the power of sport to transform lives — we would love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="c-card"><div class="c-lbl">📞 Phone / WhatsApp</div><div class="c-val"><a href="tel:+254746517518">0746 517 518</a><br><a href="tel:+254739311329">0739 311 329</a></div></div>
+      <div class="c-card"><div class="c-lbl">📧 Email</div><div class="c-val"><a href="mailto:diasporasocceracademy@gmail.com">diasporasocceracademy@gmail.com</a><br><a href="mailto:maritimken.inc@gmail.com">maritimken.inc@gmail.com</a></div></div>
+      <div class="c-card"><div class="c-lbl">📍 Location</div><div class="c-val">Ongata Rongai, Kajiado County<br>Near Nairobi National Park 🇰🇪</div></div>
+      <div class="c-card"><div class="c-lbl">🏦 Bank Donation</div><div class="c-val" style="font-size:0.85rem;">Cooperative Bank<br>01136190856100<br>Diaspora Sports CBO</div></div>
+    </div>
+    <a href="mailto:diasporasocceracademy@gmail.com" class="btn btn-gold" style="font-size:0.9rem;padding:16px 38px;">Partner With The Paws 🐾</a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2025 <strong>Diaspora Soccer Academy — The Paws 🐾</strong><br>
+    Ongata Rongai, Kajiado County, Kenya &nbsp;·&nbsp; P.O. Box 38910–00100, Nairobi<br>
+    Bank: <strong>Cooperative Bank · 01136190856100 · Diaspora Sports CBO</strong><br>
+    <em style="color:rgba(244,237,224,0.35);">"Aspire To Inspire · Play Beyond Borders"</em>
+  </p>
+</footer>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll(".gallery-panel").forEach(p => { p.style.display = "none"; p.classList.remove("active"); });
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  const panel = document.getElementById("tab-" + id);
+  if (panel) { panel.style.display = "grid"; panel.classList.add("active"); }
+  btn.classList.add("active");
+}
+</script>
+</body>
+</html>
